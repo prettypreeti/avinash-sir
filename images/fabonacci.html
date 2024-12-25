@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(245, 200, 200);
+        }
+        .container{
+            align-items: center;
+            justify-content: center;
+            margin-left: 250px;
+            border: 1px solid black;
+            width: 230px;
+            text-align: center;
+        }
+        input{
+            margin-top: 20px;
+        }
+        button{
+            margin-top: 40px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <!-- age: <input  type="number" placeholder="age"> <br> -->
+        num1:<input id="one" type="number" placeholder="number 1"> <br>
+
+        <!-- num2:<input id="num2" type="number" placeholder="number 2"> <br> -->
+        <button onclick="fab()">submit</button>
+        <p id="ans"> </p>
+
+    </div>
+    <script>
+        function fab(){
+            const n=parseFloat(document.getElementById("one").value);
+            // const num2=parseFloat(document.getElementById("num2").value);
+
+            
+         num1=1;
+        num2=1;
+        let sum=0; 
+        for(let i=3; i<=n; i++)
+        {
+            sum=num1 + num2;
+            let sum1=document.getElementById("ans").innerHTML=sum ;
+
+            // alert(sum); 
+            num1=num2; 
+            num2=sum;
+        }
+        // document.getElementById("ans").innerHTML=++sum1 ;
+        // alert(sum);
+        
+    }
+
+
+
+         
+
+        
+    </script>
+</body>
+</html>

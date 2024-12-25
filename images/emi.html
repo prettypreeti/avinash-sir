@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: aqua;
+            height: 250px;
+            width: 200px;
+            margin-left: 190px;
+            align-items: center;
+            border-radius: 5px;
+        }
+        h5{
+            margin-left: 5px;
+        }
+        input{
+            margin-left: 5px;
+        }
+        button{
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h5>principle:</h5>
+    <input id="principle" type="number">
+    <h5>interest rate:</h5>
+    <input id="interest" type="number">
+    <h5>months to pay:</h5>
+    <input id="time" type="number"><br><br>
+    <button onclick="calc()">calculate</button>
+    </div>
+    <script>
+        function calc(){
+            let p=parseInt(document.getElementById("principle").value);
+            let r=parseInt(document.getElementById("interest").value);
+            let t=parseInt(document.getElementById('time').value);
+            let c=((p*r)/100+p);
+            let ans=c/t;
+            alert(ans);
+        }
+    </script>
+</body>
+</html>

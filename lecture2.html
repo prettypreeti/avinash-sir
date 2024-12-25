@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>calculator</h2>
+    enter A: <input id="num1" type="number"> <br> 
+    enter B: <input id="num2" type="number"> <br> <hr>
+    <button onclick="add()">sum</button>
+    <p id="add">
+    </p>
+    <script>
+       function add(){
+        const a= parseInt(document.getElementById("num1").value);
+        const b=parseInt(document.getElementById("num2").value);
+        const sum=a+b;
+        alert(sum);
+        document.getElementById("add").innerHTML="we got the sum";
+        <button  onclick="subs()">substract</button>;
+       <button onclick="multi()">multiply</button>;
+        <button onclick="div()">division</button>;
+        
+        
+        
+       }
+       
+       function subs(){
+        const a= parseInt(document.getElementById("num1").value);
+        const b=parseInt(document.getElementById("num2").value);
+        const subs=a-b;
+        // alert(subs)
+        document.getElementById("add").innerHTML=subs;
+     
+
+       }
+    
+       function multi(){
+        const a= parseInt(document.getElementById("num1").value);
+        const b=parseInt(document.getElementById("num2").value);
+        const multi=a*b;
+        // alert(multi)
+        document.getElementById("add").innerHTML=multi;
+
+       }
+       function div(){
+        const a= parseInt(document.getElementById("num1").value);
+        const b=parseInt(document.getElementById("num2").value);
+        const div=a/b;
+        // alert(div)
+        document.getElementById("add").innerHTML=div;
+
+       }
+    </script>
+</body>
+</html>

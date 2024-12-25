@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-color: black; */
+            margin: 0px;
+
+
+        }
+        p{
+            color: beige;
+            font-size: 40px;
+        }
+        h2{
+            color: azure;
+            font-size: 30px;
+        }
+        button{
+            height: 40px;
+            width: 90px;
+            font-size: 20px;
+            border-radius: 3px;
+            background-color: rgb(41, 36, 36);
+            color: beige;
+            /* margin: 5px; */
+        }
+        button:hover{
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+        div{
+            height: 265px;
+            width: 300px;
+            background-color: grey;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px 0px;
+
+        }
+    </style>
+</head>
+<body><center>
+    <div>
+    <h2>counter</h2>
+    <p id="counter">0</p>
+    <button onclick="minus()">-</button>
+    <button onclick="plus()">+</button> <br> <br>
+    <button onclick="reset()">reset</button>
+    </div>
+    </center>
+    <script>
+        let counter=0;
+        function plus(){
+            
+            parseInt(document.getElementById("counter").innerHTML=++counter);
+            
+
+        }
+        function minus(){
+            parseInt(document.getElementById("counter").innerHTML=--counter);
+        }
+        function reset(){
+            counter=0;
+            parseInt(document.getElementById("counter").innerHTML=0);
+        }
+    </script>
+</body>
+</html>

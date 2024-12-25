@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            height: 100%;
+        }
+        .container{
+            height: 200px;
+            width: 300px;
+            /* background-color: blanchedalmond; */
+            align-items: center;
+            margin-top: 80px;
+            margin-left: 160px;
+        }
+        .box{
+            background-color: grey;
+            align-items: center;
+            text-align: center;
+            height: 170px;
+            /* display: flex; */
+            justify-content: center;
+            border-radius: 5px;
+        }
+        input{
+            padding-bottom: 20px;
+            width: 170px;
+            border-radius: 4px;
+        }
+        button{
+            border-radius: 5px;
+            width: 90px;
+            margin-top: 10px;
+            background-color: rgb(36, 33, 33);
+            color: beige;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>pallindrome</h1>
+            <input id="num" type="text" placeholder="enter number">
+            <br>
+            <button onclick="pallindrome()">check</button>
+            <p id="ans"></p>
+        </div>
+    </div>
+    <script>
+        function pallindrome(){
+            let n=parseInt(document.getElementById("num").value);
+            let rev=0;
+            let dummy=n;
+            while(n!=0){
+             const rem = n%10;
+             rev =rev*10+rem;
+             n=Math.floor(n/10);
+             }
+            //  console.log(rev);
+            if(dummy==rev){
+                document.getElementById("ans").innerHTML="pallindrome";
+            }
+            else{
+                document.getElementById("ans").innerHTML="notpallindrome";
+
+            }
+
+
+
+        }
+    </script>
+</body>
+</html>

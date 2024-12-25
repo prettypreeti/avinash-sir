@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+       .container {
+        margin-top: 130px;
+        margin-left: 170px;
+       }
+       .blue{
+        background-color: blue;
+       }
+       .yellow{
+        background-color: yellow;
+       }
+       .red{
+        background-color: red;
+       }
+       .green{
+        background-color: green;
+       }
+       .pink{
+        background-color: pink;
+       }
+       .voilet{
+        background-color: violet;
+       }
+       button{
+        border-radius: 5px ;
+       }
+       button:hover{
+        height: 30px;
+        width: 60px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <button class="blue " onclick="getRandomColor('blue')">blue</button>
+<button class="green" onclick="getRandomColor('green')">green</button>
+<button class="yellow" onclick="getRandomColor('yellow')">yellow</button>
+<button class="red" onclick="getRandomColor('red')">red</button>
+<button class="pink" onclick="getRandomColor('pink')">pink</button>
+<button class="voilet" onclick="getRandomColor('voilet')">voilet </button></div>
+    
+    <script>
+        
+        
+        
+      
+        function getRandomColor(color) {
+            document.body.style.backgroundColor=color;
+            
+            
+        }
+    </script>
+    
+</body>
+</html>

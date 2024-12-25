@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(245, 200, 200);
+        }
+        .container{
+            align-items: center;
+            justify-content: center;
+            margin-left: 250px;
+            border: 1px solid black;
+            width: 230px;
+            text-align: center;
+        }
+        input{
+            margin-top: 20px;
+        }
+        button{
+            margin-top: 40px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       age: <input  type="number" placeholder="age"> <br>
+        height:<input id="height" type="number" placeholder="height"> <br>
+
+        weight:<input id="weight" type="number" placeholder="weight"> <br>
+        <button onclick="bmi()">submit</button>
+
+    </div>
+    <script>
+        function bmi(){
+            const a=parseFloat(document.getElementById("height").value);
+            const b=parseFloat(document.getElementById("weight").value);
+            const bmi=b/a*a;
+            if(bmi<16){
+                alert("sever thickeness");
+            }
+            else if(bmi>16){
+                alert("overweight");
+            }
+            else{
+                alert("good");
+            }
+
+        }
+    </script>
+</body>
+</html>
